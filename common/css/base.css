@@ -1,0 +1,177 @@
+@charset 'UTF-8';
+
+/*
+---
+name: media
+category: Nuclide
+tag: [Media]
+---
+
+SCSSで使用するメディアクエリです。
+mq-down : SP
+mq-up : PC
+```css
+@include mq-down() {color: red;}
+@include mq-up() {color: blue;}
+```
+*/
+
+/*-------------------------------------------
+Base Setting
+-------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/common/css/fonts/Josefin_Sans/JosefinSans-SemiBold.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Satisfy';
+  src: url('/common/css/fonts/Satisfy/Satisfy-Regular.ttf') format('woff');
+}
+
+body,
+select,
+input,
+textarea,
+button {
+  font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  font-size-adjust: none;
+  line-height: 1.7;
+  color: #1f1f1f;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  word-break: break-all;
+}
+
+a {
+  cursor: pointer;
+  -webkit-transition: opacity .3s ease-out;
+  -o-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+  color: #008ec2;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  /* text-decoration: underline; */
+}
+
+img {
+  vertical-align: middle;
+}
+
+caption {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+textarea {
+  resize: vertical;
+}
+
+address {
+  font-style: normal;
+}
+
+em {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+legend {
+  display: none;
+}
+
+table {
+  font-weight: normal;
+  text-align: left;
+}
+
+th,
+td {
+  font-weight: normal;
+}
+
+p > img {
+  vertical-align: middle;
+}
+
+ol,
+li {
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+*[class*='aigis-'] {
+  font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: .7;
+  }
+
+  .pc-contents {
+    display: block;
+  }
+
+  .sp-contents {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 320px;
+  }
+
+  .pc-contents {
+    display: none;
+  }
+
+  .sp-contents {
+    display: block;
+  }
+}
