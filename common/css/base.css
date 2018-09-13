@@ -22,6 +22,7 @@ Base Setting
 
 html {
   font-size: 62.5%;
+  height: 100vh;
 }
 
 * {
@@ -54,6 +55,7 @@ button {
 
 body {
   position: relative;
+  height: 100vh;
   word-break: break-all;
 }
 

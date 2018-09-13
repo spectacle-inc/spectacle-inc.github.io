@@ -7241,10 +7241,12 @@ tag: [fotter]
 
   .sc-modal__doc__item__title {
     font-size: 15px;
+    display: block;
   }
 
   .sc-modal__doc__item__text {
     font-size: 13px;
+    display: block;
   }
 
   .sc-modal-close {
